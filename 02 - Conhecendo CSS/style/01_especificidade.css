@@ -1,0 +1,29 @@
+/*Especificidade
+    - Cada seletor tem um peso
+    - Soma dos pesos faz a declaração ser aplicada
+
+#id - 100
+.class - 10
+element -1
+*/
+
+
+/* Selector Specificity (1 , 1, 1) */
+p#text.green{
+    color: orange;
+}
+
+/* Selector Specificity (1 , 0, 0) */
+#text{
+    color: blue;
+}
+
+/* Selector Specificity (0 , 1, 0) */
+.green{
+    color: green;
+}
+
+/* Selector Specificity (0 , 0, 1) */
+p{
+    color: red;
+}
