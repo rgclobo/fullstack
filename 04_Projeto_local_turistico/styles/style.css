@@ -10,3 +10,19 @@
     font-family: "Open Sans", sans-serif;
 }
 
+body{
+    background-color: #1E1E1E;
+}
+
+#page{
+    background-color: #FFFFFF;
+    width: 1280px;
+    margin: 80px auto;
+}
+
+#about p:first-child{
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #E1624F;
+    font-weight: bold;
+}
