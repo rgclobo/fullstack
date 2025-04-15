@@ -18,6 +18,10 @@ img{
     border-radius: 29px;
 }
 
+li::marker{
+    color: black;
+}
+
 #page{
     background-color: #29292E;
     width: 1440px;
@@ -31,12 +35,10 @@ main {
     width: 1280px;
     margin: auto;
 }
-
 #container{
     width: 1120px;
     margin: auto;
 }
-
 #about {
     padding-top: 88px;
 }
@@ -57,41 +59,79 @@ main {
     text-align: center;
     margin-bottom: 44px;
 }
-
 #discover{
-    /* margin-top: 64px;
-    margin-bottom: 64px; */
-
     margin: 64px 0;
 }
-
 #discover p:first-child{
     margin-bottom: 2px;
 }
-
 #discover h2{
     margin-bottom: 8px;
 }
-
-
-#haedong h3{
+#haedong h3 {
+    margin-top: 20px;
     margin-bottom: 4px;
 }
-
+#haedong p + p{
+    margin-top: 20px;
+    font-weight: bold;
+}
+ #haedong li{
+     margin-left: 20px;
+     color: blue;
+     font-weight: bold;
+ }
 #beomeo{
     margin: 48px 0;
 }
+#beomeo h3{
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+#beomeo p + p{
+    margin-top: 20px;
+    font-weight: bold;
+}
+#beomeo li{
+     margin-left: 20px;
+     color: blue;
+     font-weight: bold;
+ }
 
 #yongdusan{
     margin-bottom: 40px;
 }
+#yongdusan h3{
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+#yongdusan p + p{
+    margin-top: 20px;
+    font-weight: bold;
+}
+#yongdusan li{
+    margin-left: 20px;
+    font-weight: bold;
+}
+#yongdusan li:first-child{
+    color: #591B98;
+}
+#yongdusan li:nth-child(2){
+    color: #E5245E;
+}
+#yongdusan li:last-child{
+    color: #E95E10;
+}
+
 
 #synthase{
     margin: 40px 0 7px ;
+    text-align: center;
 }
 
 #footer{
     text-align: center;
+    padding-bottom: 48px;
 }
 
 .divider{
@@ -99,7 +139,3 @@ main {
     height: 1px;
     background-color: #d9d9d9;
 }
-
-
-
-
