@@ -1,3 +1,4 @@
+/* CSS Reset */
 *{
     margin: 0;
     padding: 0;
@@ -5,30 +6,26 @@
     box-sizing: border-box;
     /* list-style: none; */
 }
-
+/* General Settings  */
 :root{
     font-family: "Open Sans", sans-serif;
 }
-
 body {
     background-color: #1E1E1E;
 }
-
 img{
     border-radius: 29px;
 }
-
 li::marker{
     color: black;
 }
-
+/* Page settings - Margin - Padding - List Itens*/
 #page{
     background-color: #29292E;
     width: 1440px;
     margin: 80px auto;
     padding: 80px;
     border-radius: 40px;
-
 }
 main {
     background-color: #F5F4F0;
@@ -42,11 +39,7 @@ main {
 #about {
     padding-top: 88px;
 }
-#about p:first-child{
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #E1624F;
-    font-weight: bold;
+#about p{
     margin-bottom: 8px;
 }
 #about h1{
@@ -80,7 +73,7 @@ main {
      margin-left: 20px;
      color: blue;
      font-weight: bold;
- }
+}
 #beomeo{
     margin: 48px 0;
 }
@@ -96,8 +89,7 @@ main {
      margin-left: 20px;
      color: blue;
      font-weight: bold;
- }
-
+}
 #yongdusan{
     margin-bottom: 40px;
 }
@@ -122,18 +114,37 @@ main {
 #yongdusan li:last-child{
     color: #E95E10;
 }
-
-
 #synthase{
     margin: 40px 0 7px ;
     text-align: center;
 }
-
 #footer{
     text-align: center;
     padding-bottom: 48px;
 }
-
+/* Text and color settings */
+.headline{
+    font-size: 16px;
+    color: #E1624F;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.title-H1{
+    font-size: 36px;
+    color: #1B1B1B;
+    font-weight: bold;
+}
+.title-H2{
+    font-size: 32px;
+    color: #1B1B1B;
+    font-weight: bold;
+}
+.title-H3{
+    font-size: 28px;
+    color: #1B1B1B;
+    font-weight: bold;
+}
+/* Settings Divider */
 .divider{
     width: 100%;
     height: 1px;
