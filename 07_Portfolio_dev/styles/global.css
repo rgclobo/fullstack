@@ -22,5 +22,25 @@
     --gray-600: #E2E4E9;
 
     /* Fonts */
+    --font-asap: "Asap", sans-serif;
+    --font-inconsolata: "Inconsolata", monospace;
+    --font-maven: "Maven Pro", sans-serif;
 
+    /* Titles */
+    --title-lg: bold 56px/120% var(--font-asap);
+    --tile-md: bold 24px/120% var(--font-asap);
+    --title-sm: bold 16px/120% var(--font-asap);
+
+    /* Subtitle */
+    --subtitle: 400 20px/120% var(--font-inconsolata);
+
+    /* Text */
+    --text-md: 400 16px/140% var(--font-maven);
+    --text-sm: 400 14px/140% var(--font-maven);
+}
+
+body{
+    font: var(--text-sm);
+    color: var(--gray-500);
+    background-color: var(--gray-200);
 }
