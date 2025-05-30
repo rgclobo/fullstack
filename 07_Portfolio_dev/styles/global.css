@@ -49,3 +49,16 @@ body{
     max-width: 1366px;
     margin-inline: auto;
 }
+
+main{
+    padding-inline: 120px;
+    p{
+        font: var(--subtitle);
+        color: var(--red);
+    }
+
+    h2{
+        font: var(--tile-md);
+        color: var(--gray-600);
+    }
+}
