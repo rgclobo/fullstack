@@ -1,12 +1,11 @@
 #profile{
    background-image: url(../assets/bg/Background_Intro.png);
-   background-size:contain;
+   background-size: contain;
    background-repeat: no-repeat;
-
+   padding-block: 120px 57px;
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding-block: 120px 183px;
    gap: 80px;
    
    header{
@@ -87,5 +86,5 @@
 }
 
 #down{
-   padding-block: 14px 57px;
+   padding-top: 14px;
 }
