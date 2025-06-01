@@ -3,3 +3,19 @@
     flex-direction: column;
     align-items: center;
 }
+
+.grid{
+    display: grid;
+}
+
+.grid-cols-3{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gap-24{
+    gap: 24px;
+}
+
+.gap-56{
+    gap: 56px;
+}

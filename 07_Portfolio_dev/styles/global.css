@@ -52,11 +52,18 @@ body{
 
 main{
     padding-inline: 120px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-header{
+    text-align: center;
     p{
         font: var(--subtitle);
         color: var(--red);
     }
-
     h2{
         font: var(--tile-md);
         color: var(--gray-600);
