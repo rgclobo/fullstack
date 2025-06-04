@@ -33,3 +33,26 @@
         color: var(--gray-500);
     }
 }
+
+#services{
+    width: 1366px;
+    padding-block: 88px 120px;
+    background-color: var(--gray-100);
+
+    section{
+        padding-inline: 119px;
+        
+        figure{
+            border: 2px solid var(--gray-300);
+            border-radius: 12px;
+
+            padding: 20px;
+
+            img{
+                width: 48px;
+                stroke: blue;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
