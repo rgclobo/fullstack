@@ -53,7 +53,7 @@ body{
 main{
     background-color: var(--gray-200);
     padding-inline: 120px;
-    padding-block: 72px 120px;
+    padding-top: 72px;
 }
 
 a{
