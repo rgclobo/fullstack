@@ -1,6 +1,6 @@
 #profile{
    background-image: url(../assets/bg/Background_Intro.png);
-   background-size: contain;
+   background-size: cover;
    background-repeat: no-repeat;
    padding-block: 120px 57px;
    display: flex;
