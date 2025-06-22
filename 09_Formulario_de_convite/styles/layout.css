@@ -1,0 +1,57 @@
+#invite{
+    display: grid;
+    grid-template-columns: 35.9375% 64.0625%;
+    gap: 1.25rem;
+
+    height: 100vh;
+    padding: 1.25rem;
+    
+    overflow: hidden;
+}
+
+main{
+    overflow: auto;
+    margin-right: 1.25rem;
+
+    border-radius: 0.75rem;
+
+    background-color: var(--shape-body);
+}
+
+aside{
+    background: linear-gradient(to bottom, #212526CC 0%, #212526A6 20%, #2125264D 41%, #2125261A 100%);
+    background-image: url(../assets/Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 0.75rem;
+
+
+    & .aside-container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem ;
+
+        img{
+            width: 2.875rem;
+            height: 2.875rem;
+        }
+
+        & .aside-header {
+            & h1{
+            font: var(--text-brand);
+            color: var(--pink);
+            }
+
+            & p{
+                font: var(--body-md);
+                font-weight: 300;
+                color: var(--text-heading);
+
+                margin-top: 0.25rem;
+            }
+        }
+    }
+}
