@@ -1,6 +1,6 @@
 #invite{
     display: grid;
-    grid-template-columns: 35.9375% 64.0625%;
+    grid-template-columns: 25rem 1fr;
     gap: 1.25rem;
 
     height: 100vh;
@@ -11,10 +11,7 @@
 
 main{
     overflow: auto;
-    margin-right: 1.25rem;
-
     border-radius: 0.75rem;
-
     background-color: var(--shape-body);
 }
 
@@ -26,7 +23,6 @@ aside{
     background-position: center;
 
     border-radius: 0.75rem;
-
 
     & .aside-container{
         display: flex;
