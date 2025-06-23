@@ -25,10 +25,11 @@ aside{
     border-radius: 0.75rem;
 
     & .aside-container{
+        padding: 2rem ;
+
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        padding: 2rem ;
 
         img{
             width: 2.875rem;
@@ -41,7 +42,7 @@ aside{
             color: var(--pink);
             }
 
-            & p{
+            & span{
                 font: var(--body-md);
                 font-weight: 300;
                 color: var(--text-heading);
