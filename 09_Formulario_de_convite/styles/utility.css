@@ -1,0 +1,11 @@
+.grid-flow-col{
+    grid-auto-flow: column;
+}
+
+.grid-cols-6{
+    grid-column: 1 / 6;
+}
+
+.grid-cols-12{
+    grid-column: 1 / 12;
+}
