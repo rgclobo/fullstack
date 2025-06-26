@@ -1,14 +1,14 @@
-
+@import url(./fields/index.css);
 
 fieldset{
-    border: none;
     display: grid;
     gap: 1.5rem;
-    
-    legend{
-        font: var(--heading-sm);
-        color: var(--text-heading);
-    }
+    border: none;
+}
+
+legend{
+    font: var(--heading-sm);
+    color: var(--text-heading);
 }
 
 .legend{
@@ -22,5 +22,10 @@ fieldset{
         width: 1.5rem;
         height: 1.5rem;
     }
+}
+
+.form-wrapper{
+    display: grid;
+    gap: 1rem;
 }
 

@@ -14,13 +14,13 @@ main{
     border-radius: 0.75rem;
     background-color: var(--shape-body);
 
-    padding: 5rem 8.125rem;
-
     & .main-container{
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
         /* grid-template-columns: repeat(12, 2rem);*/
+
+        margin: 5rem 8.125rem;;
         
         & h2{
             font: var(--heading-md);
