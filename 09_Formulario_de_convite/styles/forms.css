@@ -1,8 +1,6 @@
 @import url(./fields/index.css);
 
 fieldset{
-    display: grid;
-    gap: 1.5rem;
     border: none;
 }
 
@@ -16,16 +14,24 @@ legend{
     gap: 0.75rem;
     align-items: center;
 
-    .about-image{
+    & .about-image{
         background-image: url(./../assets/icons/calendar.svg);
         background-size: contain;
         width: 1.5rem;
         height: 1.5rem;
     }
+
+    & .customize-image{
+        background-image: url(./../assets/icons/paintbrush-vertical.svg);
+        background-size: contain;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
 }
 
-.form-wrapper{
-    display: grid;
-    gap: 1rem;
+.about-event{
+    & .form-wrapper{
+        grid-template-columns: 50% 50%;
+    }
 }
-
