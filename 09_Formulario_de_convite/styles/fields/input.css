@@ -1,6 +1,6 @@
 input, textarea{
     appearance: none;
-
+    width: 100%;
     padding: 0.8125rem 1rem;
 
     outline: 2px solid var(--input-stroke);
@@ -20,7 +20,13 @@ input, textarea{
     &::placeholder{
         color: var(--input-placeholder);
     }
+}
 
+.text-wrapper{
+    textarea{
+        height: 8.5rem;
+        resize: none;
+    }
 }
 
 input[type="datetime-local"]{
