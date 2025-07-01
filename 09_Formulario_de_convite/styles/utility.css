@@ -1,11 +1,21 @@
-/* .grid-flow-col{
-    grid-auto-flow: column;
-} */
-
+.grid{
+    display: grid;
+}
+.grid-col-1{
+    grid-column: 1 / -1;
+}
 .grid-cols-6{
     grid-column: 1 / 6;
 }
-
 .grid-cols-12{
     grid-column: 1 / 12;
+}
+.gap-16{
+    gap: 1rem;
+}
+.gap-24{
+    gap: 1.5rem;
+}
+.gap-48{
+    gap: 3rem;
 }
