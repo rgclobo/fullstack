@@ -52,3 +52,53 @@ input[type="radio"]#color{
     grid-template-columns: repeat(12, 1fr);
     gap: 0.75rem;
 }
+
+.radio-wrapper-theme{
+    width: 560px;
+    grid-template-columns: repeat(auto-fit, minmax(8.375rem, 1fr));
+    gap: .5rem;
+
+    & .radio-inner{
+        background-color: var(--shape-button);
+        border: 0.125rem solid var(--input-stroke);
+        border-radius: .5rem;
+
+        display: grid;
+        justify-items: center;
+        gap: .5rem;
+
+        position: relative;
+
+        padding: .25rem .25rem .5rem;
+
+        cursor: pointer;
+
+        & img{
+            width: 100%;
+            border-radius: .25rem;
+        }
+
+        & input,
+        & input:hover,
+        & input:focus{
+            all: unset;
+
+            position: absolute;
+            inset: 0;
+        }
+
+        & label{
+            margin-bottom: unset;
+            color: var(--text-heading);
+        }
+
+        &:hover{
+            background-color: var(--shape-hover);
+        }
+
+        &:focus,
+        &:focus-within{
+            border: 0.125rem solid var(--brand-light);
+        }
+    }
+}
