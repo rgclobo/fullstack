@@ -13,42 +13,42 @@ input[type="radio"]#color{
         outline: 0.1875rem solid var(--brand-light);
     }
 
-    &[name="brand-light"]{
+    &[value="brand-light"]{
         background-color: var(--brand-light);
     }
-    &[name="navy"]{
+    &[value="navy"]{
         background-color: var(--navy);
     }
-    &[name="purple"]{
+    &[value="purple"]{
         background-color: var(--purple);
     }
-    &[name="fuschia"]{
+    &[value="fuschia"]{
         background-color: var(--fuschia);
     }
-    &[name="pink"]{
+    &[value="pink"]{
         background-color: var(--pink);
     }
-    &[name="danger"]{
+    &[value="danger"]{
         background-color: var(--danger);
     }
-    &[name="orange"]{
+    &[value="orange"]{
         background-color: var(--orange);
     }
-    &[name="yellow"]{
+    &[value="yellow"]{
         background-color: var(--yellow);
     }
-    &[name="lime"]{
+    &[value="lime"]{
         background-color: var(--lime);
     }
-    &[name="green"]{
+    &[value="green"]{
         background-color: var(--green);
     }
-    &[name="cyan"]{
+    &[value="cyan"]{
         background-color: var(--cyan);
     }
 }
 
-.radio-inner-color{
+.radio-wrapper-color{
     grid-template-columns: repeat(12, 1fr);
     gap: 0.75rem;
 }
