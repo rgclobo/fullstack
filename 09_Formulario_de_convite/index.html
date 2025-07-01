@@ -25,15 +25,15 @@
             <div class="main-container">
                 <h2>Crie seu convite</h2>
 
-                <form action="#" method="post">
-                    <fieldset class="about-event">
+                <form action="#" method="post" class="grid gap-48">
+                    <fieldset class="about-event grid gap-24">
                         <div class="legend">
                             <div class="about-image"></div>
                             <legend>Sobre o evento</legend>
                         </div>
 
-                        <div class="form-wrapper">
-                            <div class="input-wrapper">
+                        <div class="form-wrapper grid gap-16">
+                            <div class="input-wrapper grid-col-1">
                                 <label for="title">Título</label>
                                 <input type="text" name="title" id="title" placeholder="Nome do evento">
                             </div>
@@ -71,16 +71,21 @@
                                 <input type="text" name="location" id="location" placeholder="Link ou endereço">
                             </div>
 
-                            <div class="text-wrapper">
+                            <div class="text-wrapper grid-col-1">
                                 <label for="description">Descrição</label>
                                 <textarea name="description" id="description"
-                                    cols="50"
-                                    rows="5"
                                     placeholder="Escreva sobre os detalhes do evento"
                                 ></textarea>
                             </div>
                         </div>
                     </fieldset>
+
+                    <fielset class="customize grid gap-24">
+                        <div class="legend">
+                            <div class="customize-image"></div>
+                            <legend>Personalização</legend>
+                        </div>
+                    </fielset>
                 </form>
             </div>
         </main>
