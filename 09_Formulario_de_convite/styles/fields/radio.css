@@ -1,3 +1,105 @@
+.radio-wrapper-segmented{
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 0.25rem;
+
+    outline: 2px solid var(--input-stroke);
+
+    border-radius: .5rem;
+    background-color: var(--input-case);
+
+    .radio-inner{
+        width: calc(100% - 0.25rem);
+        padding-block: 0.75rem;
+        border-radius: .25rem;
+
+        position: relative;
+
+        cursor: pointer;
+
+        & input,
+        & input:focus,
+        & input:hover{
+            all:unset;
+
+            position: absolute;
+            inset: 0;
+        }
+
+        & .radio-in-person{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+
+            & label{
+                    font: var(--body-sm);
+                    color: var(--text-body);
+                }
+
+            & .in-person-icon{
+                background-image: url(./../../assets/icons/building-2.svg);
+                background-size: cover;
+                width: 1rem;
+                height: 1rem;
+            }
+            
+        }
+
+        & .radio-online{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+
+            & label{
+                    font: var(--body-sm);
+                    color: var(--text-body);
+                }
+
+            .online-icon{
+                background-image: url(./../../assets/icons/video.svg);
+                background-size: cover;
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+
+        & label{
+            margin-bottom: unset;
+        }
+
+        &:has(:checked){
+            background-color: var(--shape-button);
+            cursor: unset;
+
+            & .radio-in-person{
+                & label{
+                    font-weight: 600;
+                    color: var(--text-heading);
+                }
+                & .in-person-icon{
+                    background-image: url(./../../assets/icons/building-2-checked.svg);
+                }
+            }
+
+            & .radio-online{
+                & label{
+                    font-weight: 600;
+                    color: var(--text-heading);
+                }
+                & .online-icon{
+                    background-image: url(./../../assets/icons/video-checked.svg);
+                }
+            }
+
+        }
+
+    }
+
+}
+
+
 input[type="radio"]#color{
     width: 2.125rem;
     height: 2.125rem;

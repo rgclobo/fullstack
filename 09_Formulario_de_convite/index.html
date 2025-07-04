@@ -50,18 +50,21 @@
 
                             <div class="radio-wrapper">
                                 <label>Tipo</label>
-
-                                <div class="radio-wrapper">
+                                <div class="radio-wrapper-segmented grid">
                                     <div class="radio-inner">
-                                        <div class="radio-in-person"></div>
-                                        <input type="radio" name="local" id="in-person" value="in-person">
-                                        <label for="in-person">Presencial</label>
+                                        <input type="radio" name="local" id="in-person" value="in-person" checked>
+                                        <div class="radio-in-person">
+                                            <div class="in-person-icon"></div>
+                                            <label for="in-person">Presencial</label>
+                                        </div>
                                     </div>
 
                                     <div class="radio-inner">
-                                        <div class="radio-online"></div>
                                         <input type="radio" name="local" id="online" value="online">
-                                        <label for="online">Online</label>
+                                        <div class="radio-online">
+                                            <div class="online-icon"></div>
+                                            <label for="online">Online</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
