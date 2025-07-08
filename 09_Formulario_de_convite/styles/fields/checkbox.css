@@ -70,4 +70,46 @@
             }
         }
     }
+
+    .terms-wrapper{
+        gap: .25rem;
+    
+        .input-wrapper{
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            padding-block: .25rem;
+
+            & input{
+                width: 1.25rem;
+                height: 1.25rem;
+                padding: unset;
+
+                border-radius: .25rem;
+                outline: 2px solid var(--input-stroke);
+
+                &:checked{
+                    outline: 2px solid var(--brand-light);
+
+                    background-image: url(./../../assets/icons/check.svg);
+                    background-size: cover;
+                }
+
+                &:has(:focus) {
+                    outline: none;
+                }
+                
+            }
+
+            & label{
+                margin-bottom: initial;
+            }
+
+            & a{
+                font-weight: 600;
+                color: var(--brand-light);
+            }
+        }
+    }
 }
