@@ -207,10 +207,33 @@
                         </div>
                     </fielset>
 
-                    <fieldset class="contact-details grid gap24">
+                    <fieldset class="contact-details grid gap-24">
                         <div class="legend">
                             <div class="contact-details-image"></div>
                             <legend>Dados de contato</legend>
+                        </div>
+
+                        <div class="form-wrapper grid gap-16">
+                            <div class="input-wrapper grid-col-1">
+                                <label for="name">Nome</label>
+                                <input type="text" name="name" id="name" 
+                                    required
+                                    placeholder="Nome completo">
+                                <div class="required">
+                                    <img src="./assets/icons/circle-alert.svg" alt="Símbolo de exclamação vermelho">
+                                    <span>Campo obrigatório</span>
+                                </div>
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" id="email" placeholder="exemplo@email.com">
+                            </div>
+
+                            <div class="input-wrapper">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" name="phone" id="phone" placeholder="(99) 99999-9999">
+                            </div>
                         </div>
                     </fieldset>
                 </form>
