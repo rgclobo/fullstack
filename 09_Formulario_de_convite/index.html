@@ -40,12 +40,18 @@
 
                             <div class="input-wrapper">
                                 <label for="start">Ínicio</label>
-                                <input type="datetime-local" name="start" id="start">
+                                <input type="text" name="start" id="start" 
+                                    placeholder="DD/MM/AAAA, --:--"
+                                    onfocus="this.type='datetime-local'"
+                                    onblur="if (!this.value) this.type='text'">
                             </div>
 
                             <div class="input-wrapper">
                                 <label for="end">Fim</label>
-                                <input type="datetime-local" name="end" id="end">
+                                <input type="text" name="end" id="end"
+                                    placeholder="DD/MM/AAAA, --:--"
+                                    onfocus="this.type='datetime-local'"
+                                    onblur="if (!this.value) this.type='text'">
                             </div>
 
                             <div class="radio-wrapper">
