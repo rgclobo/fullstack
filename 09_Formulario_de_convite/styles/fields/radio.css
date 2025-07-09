@@ -5,7 +5,7 @@
 
     padding: 0.25rem;
 
-    outline: 2px solid var(--input-stroke);
+    outline: 0.125rem solid var(--input-stroke);
 
     border-radius: .5rem;
     background-color: var(--input-case);

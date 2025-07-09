@@ -6,7 +6,7 @@
             align-items: center;
 
             background-color: var(--input-case);
-            border: 1px solid var(--input-stroke);
+            border: 0.0625rem solid var(--input-stroke);
             border-radius: 2rem;
 
             width: 4rem;
@@ -90,10 +90,10 @@
                 padding: unset;
 
                 border-radius: .25rem;
-                outline: 2px solid var(--input-stroke);
+                outline: 0.125rem solid var(--input-stroke);
 
                 &:checked{
-                    outline: 2px solid var(--brand-light);
+                    outline: 0.125rem solid var(--brand-light);
 
                     background-image: url(./../../assets/icons/check.svg);
                     background-size: cover;

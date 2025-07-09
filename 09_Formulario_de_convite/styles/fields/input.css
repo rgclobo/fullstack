@@ -4,7 +4,7 @@ input, textarea{
     height: 3rem;
     padding-inline: 1rem;
 
-    outline: 2px solid var(--input-stroke);
+    outline: 0.125rem solid var(--input-stroke);
     border: none;
     border-radius: .5rem;
     background-color: var(--input-case);
@@ -15,7 +15,7 @@ input, textarea{
     cursor: pointer;
 
     &:focus {
-        outline: 2px solid var(--brand-light);
+        outline: 0.125rem solid var(--brand-light);
     }
 
     &::placeholder{
@@ -43,7 +43,7 @@ input[type="datetime-local"]{
     text-transform: uppercase;
 
     &:focus-within{
-        outline: 2px solid var(--brand-light);
+        outline: 0.125rem solid var(--brand-light);
     }
 
     &::-webkit-calendar-picker-indicator {
@@ -58,7 +58,7 @@ input[type="datetime-local"]{
 
 input{
     &:invalid{
-        outline: 2px solid var(--danger);
+        outline: 0.125rem solid var(--danger);
     }
 
     &[required] + .required{
