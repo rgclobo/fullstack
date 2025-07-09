@@ -37,6 +37,10 @@ legend{
 
 }
 
+.form-wrapper{
+    max-width: 35rem;
+}
+
 .about-event{
     & .form-wrapper{
         grid-template-columns: 1fr 1fr;

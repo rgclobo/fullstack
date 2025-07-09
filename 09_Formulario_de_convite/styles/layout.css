@@ -21,7 +21,7 @@ main{
     background-color: var(--shape-body);
 
     & .main-container{
-        max-width: 35rem;
+
         margin-inline: 8.125rem;
         padding-block: 5rem;
             
