@@ -151,12 +151,11 @@ input[type="radio"]#color{
 }
 
 .radio-wrapper-color{
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(11, 1fr);
     gap: 0.75rem;
 }
 
 .radio-wrapper-theme{
-    width: 560px;
     grid-template-columns: repeat(auto-fit, minmax(8.375rem, 1fr));
     gap: .5rem;
 

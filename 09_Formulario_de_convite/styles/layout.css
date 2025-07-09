@@ -15,12 +15,10 @@ main{
     background-color: var(--shape-body);
 
     & .main-container{
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-
-        margin: 5rem 8.125rem;;
-        
+        max-width: 35rem;
+        margin-inline: 8.125rem;
+        padding-block: 5rem;
+            
         & h2{
             font: var(--heading-md);
             color: var(--text-heading);
