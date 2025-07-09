@@ -1,7 +1,8 @@
 input, textarea{
     appearance: none;
     width: 100%;
-    padding: 0.8125rem 1rem;
+    height: 3rem;
+    padding-inline: 1rem;
 
     outline: 2px solid var(--input-stroke);
     border: none;
@@ -33,6 +34,7 @@ label{
     textarea{
         height: 8.5rem;
         resize: none;
+        padding-top: 1rem;
     }
 }
 
