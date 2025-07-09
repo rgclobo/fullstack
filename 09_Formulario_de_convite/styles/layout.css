@@ -3,10 +3,16 @@
     grid-template-columns: 25rem 1fr;
     gap: 1.25rem;
 
+    max-width: 80rem;
     height: 100vh;
     padding: 1.25rem;
+    margin-inline: auto;
     
     overflow: hidden;
+
+    background-color: var(--shape-background);
+
+    border-radius: 1.25rem;
 }
 
 main{
