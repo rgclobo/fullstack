@@ -1,72 +1,75 @@
 .checkbox-wrapper{
     & .checkbox-toggle{
-        display: flex;
-        align-items: center;
+        height: 3rem;
+        & .toggle{
+            display: flex;
+            align-items: center;
 
-        background-color: var(--input-case);
-        border: 1px solid var(--input-stroke);
-        border-radius: 2rem;
+            background-color: var(--input-case);
+            border: 1px solid var(--input-stroke);
+            border-radius: 2rem;
 
-        width: 4rem;
-        height: 2rem;
+            width: 4rem;
+            height: 2rem;
+            position: relative;
+            top: calc((3rem - 2rem) / 2);
 
-        position: relative;
-
-        cursor: pointer;
-
-        transition: .5s;
-
-        & input,
-        & input:focus,
-        & input:hover{
-            all:unset;
-
-            position: absolute;
-            inset: 0;
-        }
-
-        &::before{
-            content: "";
-            position: absolute;
-
-            width: 1.5rem;
-            height: 1.5rem;
-
-            left: 0.25rem;
-
-            background-color: var(--input-stroke);
-            border-radius: 0.75rem;
+            cursor: pointer;
 
             transition: .5s;
-        }
 
-        &:has(:checked){
-            background-color: var(--brand-light);
+            & input,
+            & input:focus,
+            & input:hover{
+                all:unset;
+
+                position: absolute;
+                inset: 0;
+            }
+
             &::before{
                 content: "";
-                left: calc(4rem - 1.75rem);
-                background-color: var(--text-heading);
+                position: absolute;
+
+                width: 1.5rem;
+                height: 1.5rem;
+
+                left: 0.25rem;
+
+                background-color: var(--input-stroke);
+                border-radius: 0.75rem;
+
+                transition: .5s;
             }
-        }
 
-        & span::before{
-            position: absolute;
+            &:has(:checked){
+                background-color: var(--brand-light);
+                &::before{
+                    content: "";
+                    left: calc(4rem - 1.75rem);
+                    background-color: var(--text-heading);
+                }
+            }
 
-            content: "Escuro";
-
-            height: 1.25rem;
-            top: calc((2rem - 1.25rem) / 2);
-            left: 4.75rem;
-
-            font: var(--body-sm);
-            color: var(--text-heading);
-
-            cursor: initial;
-        }
-
-        &:has(:checked){
             & span::before{
-                content: "Claro";
+                position: absolute;
+
+                content: "Escuro";
+
+                height: 1.25rem;
+                top: calc((2rem - 1.25rem) / 2);
+                left: 4.75rem;
+
+                font: var(--body-sm);
+                color: var(--text-heading);
+
+                cursor: initial;
+            }
+
+            &:has(:checked){
+                & span::before{
+                    content: "Claro";
+                }
             }
         }
     }
