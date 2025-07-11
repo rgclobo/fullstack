@@ -4,24 +4,23 @@
     gap: 1.25rem;
 
     max-width: 80rem;
-    height: 100vh;
+    min-height: 100vh; /* Necessário para o mínimo da tela sempre ser 100% */
     padding: 1.25rem;
     margin-inline: auto;
     
-    overflow: hidden;
-
     background-color: var(--shape-background);
 
     border-radius: 1.25rem;
 }
 
 main{
-    overflow: auto;
+    overflow-y: auto; /* Habilita o scroll apenas da main */
+    height: 100%; /* Necessário para a main preencher toda a coluna do grid */
     border-radius: 0.75rem;
     background-color: var(--shape-body);
 
     & .main-container{
-
+        min-height: calc(100% - 10rem); /* Para evitar que o padding quebre o layout */
         margin-inline: 8.125rem;
         padding-block: 5rem;
             
@@ -40,6 +39,10 @@ aside{
     background-position: center;
 
     border-radius: 0.75rem;
+
+    position: sticky; /* Para que o aside fique sempre parado e não tenha rolagem */
+    top: 1.25rem; /* Posição do aside conforme o padding no #invite */
+    height: calc(100vh - 2.5rem); /* Tamanho da altura descontando os paddings do #invite */
 
     & .aside-container{
         padding: 2rem ;
