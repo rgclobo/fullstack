@@ -1,0 +1,41 @@
+.py-base{
+    padding-block: var(--py-base);
+}
+
+.py-lg{
+    padding-block: var(--py-lg);
+}
+
+.px-base{
+    padding-inline: var(--px-base);
+}
+
+.px-lg{
+    padding-inline: var(--px-lg);
+}
+
+.container{
+    --max-width: 22.5rem;
+    width: min(var(--max-width), 100% - var(--py-base) * 2);
+    margin-inline: auto;
+}   
+
+.flex{
+    display: flex;
+}
+.gap-1{
+    gap: 1rem;
+}
+
+.desktop-only{
+    display: none;
+}
+
+@media (width >= 80em) {
+    .container{
+        --max-width: 80rem;
+    }
+    .desktop-only{
+        display: initial;
+    }
+}

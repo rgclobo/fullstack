@@ -1,0 +1,51 @@
+nav{
+    align-items: center;
+    justify-content: space-between;
+
+    & #logo{
+        line-height: 0;
+    }
+
+    & #primary-menu{
+        align-items: center;
+
+        line-height: 1.5;
+
+        & li a:hover{
+            text-decoration: underline;
+            color: var(--brand-color);
+        }
+
+        & li:first-child .explorer-image{
+            background: url(./../assets/icons/MagnifyingGlass.svg) no-repeat;
+            background-size: contain;
+            width: 1.5rem;
+            height: 1.5rem;
+
+            &:hover{
+                background: url(./../assets/icons/MagnifyingGlass-hover.svg);
+            }
+        }
+
+        & li:last-child .profile-image{
+            background: url(./../assets/Profile-pic.png);
+            background-size: contain;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+        }
+    }
+}
+
+@media (width >= 80em) {
+    nav{
+        --py-base: 1.25rem;
+
+        & #primary-menu{
+            & li:first-child .explorer-image{
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+}

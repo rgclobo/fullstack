@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+:root{
+    /* Colors Varible */
+    --brand-color: #EF5F4C;
+    --background-color: #FFFFFF;
+    --surface-color: #F5F5F5;
+    --skeleton-color: #D9D9D9;
+    --shape-transparency: #ffffff8f;
+    --text-color-primary: #313131;
+    --text-color-secondary: #6C6C6C;
+
+    /* Font Variable */
+    --ff-sans: "Poppins", sans-serif;
+    /* Font Weight */
+    --fw-base: 400;
+    --fw-md: 500;
+    --fw-bold: 800;
+    /* Font Size */
+    --fs-sm: 0.75rem;
+    --fs-base: 0.875rem;
+    --fs-md: 1rem;
+    --fs-logo: 1.25rem;
+    --fs-lg: 2rem;
+
+    /* Padding variable */
+    --py-base: 1rem;
+    --py-lg: 2rem;
+
+    --px-base: 1rem;
+    --px-lg: 2rem;
+}
+html{
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-base);
+    font-size: var(--fs-md);
+    line-height: 1.7;
+    color: var(--text-color-secondary);
+}
+body{
+    background-color: var(--background-color);
+}
+ul[role="list"]{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (width >= 80em){
+    /* Padding variable */
+    :root{
+        --py-base: 2rem;
+
+        --px-base: 1.5rem;
+    }
+
+
+}
+
+
