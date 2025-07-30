@@ -1,0 +1,63 @@
+#profile{
+    --py-base: 2rem;
+    flex-direction: column;
+
+    & #profile-bio{
+        flex-direction: column;
+        & img{
+            width: 7.5rem;
+            height: 7.5rem;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        & div{
+            width: 18.5rem;
+            & h1{
+                margin-bottom: .5rem;
+            }
+            & p{
+                font: var(--fw-base) var(--fs-sm)/1.7 var(--ff-sans);
+            }
+        }
+    }
+    & #info{
+        flex-direction: column;
+
+        & li{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            & img{
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            & span{
+                font: var(--fw-base) var(--fs-sm)/1.7 var(--ff-sans);
+            }
+        }
+    } 
+
+    @media (width >= 80em) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        & #profile-bio{
+            flex-direction: row;
+            align-items: center;
+            & img{
+                width: 11rem;
+                height: 11rem;
+            }
+
+            & div{
+                width: 24rem;
+            }
+        }
+        & #info{
+            width: 17.5rem;
+        }
+    }
+}

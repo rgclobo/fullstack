@@ -25,11 +25,11 @@
     --fw-md: 500;
     --fw-bold: 800;
     /* Font Size */
-    --fs-sm: 0.75rem;
-    --fs-base: 0.875rem;
-    --fs-md: 1rem;
-    --fs-logo: 1.25rem;
-    --fs-lg: 2rem;
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.875rem;
+    --fs-base: 1rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 2rem;
 
     /* Padding variable */
     --py-base: 1rem;
@@ -41,7 +41,7 @@
 html{
     font-family: var(--ff-sans);
     font-weight: var(--fw-base);
-    font-size: var(--fs-md);
+    font-size: var(--fs-base);
     line-height: 1.7;
     color: var(--text-color-secondary);
 }
@@ -56,6 +56,14 @@ a{
     color: inherit;
 }
 
+h1{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-lg);
+    line-height: 1.25;
+
+    color: var(--text-color-primary);
+}
+
 @media (width >= 80em){
     /* Padding variable */
     :root{
@@ -64,6 +72,9 @@ a{
         --px-base: 1.5rem;
     }
 
+    h1{
+        font-size: var(--fs-xl);
+    }
 
 }
 
