@@ -1,0 +1,16 @@
+#galery{
+    justify-content: center;
+    & img{
+        width: 20.5rem;
+        height: 20.5rem;
+    }
+
+    @media (width >= 80em){
+        grid-template-columns: repeat(4, 17.875rem);
+        gap: 1.25rem;
+        & img{
+            width: 17.875rem;
+            height: 17.875rem;
+        }
+    }
+}
