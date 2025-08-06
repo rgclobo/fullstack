@@ -1,0 +1,30 @@
+#footer{
+    flex-direction: column;
+    align-items: center;
+
+    & span{
+        font: var(--fw-base) var(--fs-sm)/1.5 var(--ff-sans);
+    }
+    & div{
+        & a{
+            font: var(--fw-base) var(--fs-sm)/1.5 var(--ff-sans);
+
+            &:hover{
+                text-decoration: underline;
+                color: var(--brand-color);
+            }
+        }
+
+        & a:first-child{
+            margin-right: 1.25rem;
+        }
+    }
+
+    @media (width >= 33.75em){
+        flex-direction: row;
+
+        & span{
+            margin-right: auto;
+        }
+    }
+}
