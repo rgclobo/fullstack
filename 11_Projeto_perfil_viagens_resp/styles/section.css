@@ -5,12 +5,14 @@
         height: 20.5rem;
     }
 
-    @media (width >= 80em){
-        grid-template-columns: repeat(4, 17.875rem);
+    @media (width >= 33.75em){
+        grid-template-columns: repeat(auto-fit, minmax(17.875rem, 1fr));
         gap: 1.25rem;
+        justify-items: center;
         & img{
             width: 17.875rem;
             height: 17.875rem;
+            object-fit: cover;
         }
     }
 }
