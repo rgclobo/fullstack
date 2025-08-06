@@ -64,7 +64,7 @@ h1{
     color: var(--text-color-primary);
 }
 
-@media (width >= 80em){
+@media (width >= 33.75em){
     /* Padding variable */
     :root{
         --py-base: 2rem;

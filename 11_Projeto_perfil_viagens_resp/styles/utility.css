@@ -41,7 +41,7 @@
     display: none;
 }
 
-@media (width >= 80em) {
+@media (width >= 33.75em) {
     .container{
         --max-width: 80rem;
     }

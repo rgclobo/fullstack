@@ -37,7 +37,7 @@ nav{
     }
 }
 
-@media (width >= 80em) {
+@media (width >= 33.75em) {
     nav{
         --py-base: 1.25rem;
 

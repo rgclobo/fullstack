@@ -40,13 +40,21 @@
         }
     } 
 
-    @media (width >= 80em) {
+    @media (width >= 41.875em) {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         & #profile-bio{
             flex-direction: row;
             align-items: center;
+        }
+        & #info{
+            width: 17.5rem;
+        }
+    }
+
+    @media (width >= 50.625em){
+        & #profile-bio{
             & img{
                 width: 11rem;
                 height: 11rem;
@@ -55,9 +63,6 @@
             & div{
                 width: 24rem;
             }
-        }
-        & #info{
-            width: 17.5rem;
         }
     }
 }
