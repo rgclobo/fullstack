@@ -35,9 +35,14 @@
     }
 }
 
-
 @keyframes rolling{
     to{
         transform: translateX(-132px);
+    }
+}
+
+@media (width <= 60.6em){
+    .banner{
+        padding-block: 1.5rem;
     }
 }

@@ -1,4 +1,5 @@
 section.hero{
+    --height: -5rem;
     max-width: 80rem;
     width: 100%;
     padding: 2.5rem 2rem;
@@ -45,6 +46,7 @@ section.hero{
         margin-top: 3rem;
 
         & .button{
+            width: fit-content;
             display: flex;
             align-items: center;
             gap: .75rem;
@@ -54,7 +56,7 @@ section.hero{
             transition: scale 350ms;
 
             &.buy{
-                padding: 1.5rem;
+                padding: 1.5rem 3rem;
                 background-color: var(--snitap-sun);
             }
 
@@ -162,6 +164,7 @@ section.hero{
 
 /* H1 Animation */
 @keyframes slideUp{
+    
     /* radical static */
     0%, 22%{
         transform: translateY(0);
@@ -169,56 +172,94 @@ section.hero{
 
     /* divertida in */
     23%{
-        transform: translateY(calc(-5rem - 15px));
+        transform: translateY(calc(var(--height) - 15px));
     }
     25%{
-        transform: translateY(calc(-5rem + 10px));
+        transform: translateY(calc(var(--height) + 10px));
     }
     27%{
-        transform: translateY(calc(-5rem - 5px));
+        transform: translateY(calc(var(--height) - 5px));
     }
     29%{
-        transform: translateY(calc(-5rem + 5px));
+        transform: translateY(calc(var(--height) + 5px));
     }
 
     /* divertida static */
     33%, 55%{
-        transform: translateY(-5rem);
+        transform: translateY(var(--height));
     }
 
     /* saudável in */
     56%{
-        transform: translateY(calc(-10rem - 15px));
+        transform: translateY(calc(var(--height) * 2 - 15px));
     }
     58%{
-        transform: translateY(calc(-10rem + 10px));
+        transform: translateY(calc(var(--height) * 2 + 10px));
     }
     60%{
-        transform: translateY(calc(-10rem - 5px));
+        transform: translateY(calc(var(--height) * 2 - 5px));
     }
     62%{
-        transform: translateY(calc(-10rem + 5px));
+        transform: translateY(calc(var(--height) * 2 + 5px));
     }
     /* saudável static */
     66%, 88%{
-        transform: translateY(-10rem);
+        transform: translateY(calc(var(--height) * 2));
     }
 
     /* radical in */
     89%{
-        transform: translateY(calc(-15rem - 15px));
+        transform: translateY(calc(var(--height) * 3 - 15px));
     }
     91%{
-        transform: translateY(calc(-15rem + 10px));
+        transform: translateY(calc(var(--height) * 3 + 10px));
     }
     93%{
-        transform: translateY(calc(-15rem - 5px));
+        transform: translateY(calc(var(--height) * 3 - 5px));
     }
     95%{
-        transform: translateY(calc(-15rem + 5px));
+        transform: translateY(calc(var(--height) * 3 + 5px));
     }
 
     100%{
-        transform: translateY(-15rem);
+        transform: translateY(calc(var(--height) * 3));
+    }
+}
+
+@media (width <= 60.6em){
+    section.hero{
+        /* Buttons */
+        & .buttons{
+            flex-direction: column-reverse;
+        }
+    }
+}
+@media (width <= 53.7em){
+    section.hero{
+        padding: 1rem 1.5rem 3rem;
+
+        flex-direction: column-reverse;
+        
+        gap: 2rem;
+    }
+}
+@media (width <= 31.25em){
+    section.hero{
+        --height: -2.5rem;
+
+        & h1 div{
+            height: 2.5rem;
+        }
+
+        & > div:nth-child(2){
+            height: 25.5rem;
+        }
+    }
+}
+@media (width <= 25em){
+    section.hero{
+        & > div:nth-child(2){
+            height: 19.5rem;
+        }
     }
 }
