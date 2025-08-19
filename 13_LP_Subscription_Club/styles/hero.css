@@ -1,0 +1,95 @@
+#hero{
+    max-width: 90rem;
+    width: 100%;
+    margin-inline: auto;
+
+    background-image: url(./../assets/hero-background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    
+    & .navbar{
+        max-width: 70rem;
+        margin-inline: auto;
+        padding-top: 3.5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & a{
+            padding: .75rem 1.25rem;
+            border-radius: .5rem;
+
+            background-color: var(--pink-dark);
+        }
+    }
+
+    & .title{
+        width: 41rem;
+        margin-inline: auto;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        & p{
+            width: 35.5rem;
+            font: var(--fw-base) var(--body-lg)/1.4 var(--ff-base);
+        }
+    }
+
+    & section{
+        max-width: 75rem;
+        width: 100%;
+        height: 25rem;
+        margin: 35.375rem auto 14.875rem;
+        position: relative;
+        
+
+        & h2{
+            max-width: 71rem;
+            width: 100%;
+            padding-top: 7.125rem;
+            margin-inline: auto;
+            font: var(--fw-base) var(--subtitle)/2.0 var(--ff-base);
+            text-align: center;
+        }
+
+        & img[src*="planchette"]{
+            width: 5rem;
+            height: 5rem;
+
+            position: absolute;
+            top: 14.7475rem;
+            left: 2.125rem;
+
+            transform: rotate(99.47deg);
+        }
+
+        & img[src*="crystal-ball"]{
+            width: 4.5rem;
+            height: 4.5rem;
+
+            position: absolute;
+            top: 14.75875rem;
+            left: 69.63375rem;
+
+            transform: rotate(14.48deg);
+        }
+
+        & img[src*="spellbook"]{
+            width: 5.5rem;
+            height: 5.5rem;
+
+            position: absolute;
+            top: 0.52rem;
+            left: 33.0625rem;
+
+            transform: rotate(20.76deg);
+
+        }
+    }
+}
