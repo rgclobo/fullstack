@@ -6,7 +6,7 @@
 
 :root{
     /* Variables */
-    /* Colors */
+        /* colors */
     --pink-light: #C59DD2;
     --pink-base: #9547A5;
     --pink-dark: #7D298A;
@@ -28,12 +28,57 @@
     --text-label: #BAC6C9;
 
     /* Fonts */
-    --ff: "Raleway", sans-serif;
+        /* family */
+    --ff-base: "Raleway", sans-serif;
+        /* weight */
     --fw-base: 400;
     --fw-md: 500;
     --fw-bold: 700;
+        /* sizes */
+    --title-lg: 3rem;
+    --title-md: 2.5rem;
+    --title-sm: 2rem;
+    --title-xs: 1rem;
+    --subtitle: 2rem;
+    --body-lg: 1.25rem;
+    --body-md: 1rem;
+    --body-sm: 0.875rem;
+    --body-xs: 0.75rem;
+    --button: 0.875rem;
+    --link: 0.875rem;
+    --tag: 0.625rem;
+}
+
+html{
+    font-family: var(--ff-base);
+    font-weight: var(--fw-base);
+    color: var(--text-body);
 }
 
 body{
     background-color: var(--shape-background);
+}
+
+h1, h2, h3, h4{
+    font-weight: var(--fw-bold);
+    color: var(--text-title);
+}
+h1{
+    font-size: var(--title-lg);
+}
+h2{
+    font-size: var(--title-md);
+}
+h3{
+    font-size: var(--title-sm);
+}
+h4{
+    font-size: var(--title-xs);
+}
+
+a{  
+    font-size: var(--link);
+    font-weight: var(--fw-md);
+    text-decoration: none;
+    color: inherit;
 }
