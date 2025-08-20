@@ -10,7 +10,7 @@
         color: var(--purple);
     }
     span{
-        color: var(--gray-500);
+        color: var(--gray-200);
         font: var(--text-md);
     }
 
@@ -20,12 +20,12 @@
             display: flex;
             gap: 12px;
             align-items: center;
-            background-color: var(--gray-300);
+            background-color: var(--gray-400);
             width: 400px;
             padding: 20px;
             border-radius: 8px;
             font: var(--text-md);
-            color: var(--gray-500); 
+            color: var(--gray-200); 
         }
         img+img{
             width: 20px;

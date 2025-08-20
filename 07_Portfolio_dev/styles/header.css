@@ -34,19 +34,19 @@
          max-width: 680px;
          p:nth-child(1){
             font: var(--subtitle);
-            color: var(--gray-500);
+            color: var(--gray-200);
             span{
                color: var(--red);
             }
          }
          h1{
             font: var(--title-lg);
-            color: var(--gray-600);
+            color: var(--gray-100);
             padding-block: 8px 20px;
          }
          p:nth-child(3){
             font: var(--text-sm);
-            color: var(--gray-400);
+            color: var(--gray-300);
          }
       }   
    }
@@ -61,7 +61,7 @@
       display: flex;
       align-items: center;
       column-gap: 8px;
-      background-color: var(--gray-300);
+      background-color: var(--gray-400);
       padding: 8px 16px;
       border-radius: 80px;
 
@@ -71,7 +71,7 @@
 
       span{
          font: var(--text-md);
-         color: var(--gray-500);
+         color: var(--gray-200);
       }
    }
 }
