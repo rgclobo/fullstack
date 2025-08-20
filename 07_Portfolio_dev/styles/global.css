@@ -45,15 +45,11 @@ body{
     background-color: var(--gray-300)
 }
 
-.container{
-    max-width: 1366px;
-    margin-inline: auto;
-}
-
 main{
     background-color: var(--gray-200);
-    padding-inline: 120px;
+
     padding-top: 72px;
+    padding-inline: 120px;
 }
 
 a{

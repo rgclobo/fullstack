@@ -3,31 +3,26 @@
    background-size: cover;
    background-repeat: no-repeat;
    padding-block: 120px 57px;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+
    gap: 80px;
    
-   header{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+   & header{
       gap: 56px;
 
       #img-profile{
          position: relative;
          /* Config IMG */
-         img:nth-child(1){
-         width: 96px;
-         height: 96px;
-         object-fit: cover;
-         border-radius: 50%;
-         /* Img Border */
-         border: 3px solid var(--red);
-         padding: 5px;
+         & img:nth-child(1){
+            width: 96px;
+            height: 96px;
+            object-fit: cover;
+            border-radius: 50%;
+            /* Img Border */
+            border: 3px solid var(--red);
+            padding: 5px;
          }
          /* SVG Code Position */
-         img:nth-child(2){
+         & img:nth-child(2){
             position: absolute;
 
             bottom: 6px;
