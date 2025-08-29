@@ -1,15 +1,10 @@
 #hero{
-    max-width: 90rem;
-    width: 100%;
-    margin-inline: auto;
+    position: relative;
+    overflow: hidden;
 
-    background-image: url(./../assets/hero-background.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-
-    
     & .navbar{
         max-width: 70rem;
+        width: calc(100% - 1.25rem);
         margin-inline: auto;
         padding-top: 3.5rem;
 
@@ -17,17 +12,22 @@
         align-items: center;
         justify-content: space-between;
 
-        & a{
+        & .button{
             padding: .75rem 1.25rem;
             border-radius: .5rem;
 
             background-color: var(--pink-dark);
+
+            color: var(--text-title);
+            font-weight: var(--fw-bold)
         }
     }
 
     & .title{
-        width: 41rem;
+        max-width: 41rem;
+        width: 100%;
         margin-inline: auto;
+        padding-top: 10.25rem;
         text-align: center;
 
         display: flex;
@@ -35,9 +35,19 @@
         align-items: center;
         gap: 2rem;
 
+        & h1{
+            opacity: 0;
+            animation: 
+                appear 4s 250ms ease forwards;
+        }
+
         & p{
             width: 35.5rem;
             font: var(--fw-base) var(--body-lg)/1.4 var(--ff-base);
+
+            opacity: 0;
+            animation: 
+                appear 1s 1s forwards;
         }
     }
 
@@ -47,49 +57,326 @@
         height: 25rem;
         margin: 35.375rem auto 14.875rem;
         position: relative;
-        
 
         & h2{
             max-width: 71rem;
             width: 100%;
             padding-top: 7.125rem;
             margin-inline: auto;
-            font: var(--fw-base) var(--subtitle)/2.0 var(--ff-base);
             text-align: center;
+            font: var(--fw-base) var(--subtitle)/2.0 var(--ff-base);
+
+            & .part-1, .part-2, .part-3 {
+                opacity: .5;
+            }
+            
+            & .part-1{
+                transition: 
+                    opacity 550ms ease,
+                    color 550ms ease;
+
+                & .highlight{
+                    transition: color 550ms ease;
+                }
+            }
+
+            & .part-2{
+                transition: 
+                    opacity 525ms ease,
+                    color 525ms ease;
+
+                & .highlight{
+                    transition: color 525ms ease;
+                }
+            }
+
+            & .part-3{
+                transition: 
+                    opacity 500ms ease,
+                    color 500ms ease;
+
+                & .highlight{
+                    transition: color 500ms ease;
+                }
+            }
+
+            & .highlight{
+                font-weight: var(--fw-bold);
+            }
         }
 
-        & img[src*="planchette"]{
-            width: 5rem;
-            height: 5rem;
-
+        & img{
             position: absolute;
-            top: 14.7475rem;
-            left: 2.125rem;
+            aspect-ratio: 1/1;
 
-            transform: rotate(99.47deg);
-        }
-
-        & img[src*="crystal-ball"]{
-            width: 4.5rem;
-            height: 4.5rem;
-
-            position: absolute;
-            top: 14.75875rem;
-            left: 69.63375rem;
-
-            transform: rotate(14.48deg);
+            transform: rotate(var(--angle));
+            scale: 0;
+            opacity: 0;
         }
 
         & img[src*="spellbook"]{
-            width: 5.5rem;
-            height: 5.5rem;
+            --angle: 20.76deg;
+            max-width: 5.5rem;            
 
-            position: absolute;
             top: 0.52rem;
             left: 33.0625rem;
 
-            transform: rotate(20.76deg);
+            transition: 
+                scale 550ms ease,
+                opacity 550ms ease,
+                
+                transform 400ms 0s ease;
+            &:hover{
+                transform: rotate(34deg) scale(1.15);
+            }
 
         }
+
+        & img[src*="planchette"]{
+            --angle: 99.47deg;
+            max-width: 5rem;
+
+            top: 14.7475rem;
+            left: 2.125rem;
+
+            transition: 
+                scale 525ms ease,
+                opacity 525ms ease,
+                
+                transform 400ms ease;
+            &:hover{
+                transform: rotate(120deg) scale(1.15);
+                transition: transform 400ms ease;
+            }
+        }
+
+        & img[src*="crystal-ball"]{
+            --angle: -14.48deg;
+            max-width: 4.5rem;
+
+            top: 14.75875rem;
+            left: 69.63375rem;
+
+            transition: 
+                scale 500ms ease,
+                opacity 500ms ease,
+
+                transform 400ms 0s ease;
+            &:hover{
+                transform: rotate(-2.48deg) scale(1.15);
+                transition: transform 400ms ease;
+            }
+        }
+
+        &:hover{
+            & h2{
+                & .part-1{
+                    opacity: 1;
+                    color: var(--text-title);
+
+                    transition: 
+                        opacity .8s 100ms ease,
+                        color .8s 100ms ease;
+
+                    & .highlight{
+                        color: var(--blue-light);
+
+                        transition: color .8s 100ms ease;
+                    }
+                }
+
+                & .part-2{
+                    opacity: 1;
+                    color: var(--text-title);
+
+                     transition: 
+                        opacity .8s 900ms ease,
+                        color .8s 900ms ease;
+
+                    & .highlight{
+                        color: var(--blue-light);
+
+                        transition: color .8s 900ms ease;
+                    }
+                }
+
+                & .part-3{
+                    opacity: 1;
+                    color: var(--text-title);
+
+                    transition: 
+                        opacity .8s 1700ms ease,
+                        color .8s 1700ms ease;
+
+                    & .highlight{
+                        color: var(--blue-light);
+
+                        transition: color .8s 1700ms ease;;
+                    }
+                }
+            }
+
+            & img{
+                scale: 1;
+                opacity: 1;
+            }
+
+            & img[src*="spellbook"]{
+                transition: 
+                    scale .8s 100ms ease,
+                    opacity .8s 100ms ease,
+                    transform 400ms ease;
+
+                width: 100%;
+            }
+
+            & img[src*="planchette"]{
+                transition: 
+                    scale .8s 900ms ease,
+                    opacity .8s 900ms ease,
+                    transform 400ms ease;
+
+                width: 100%;
+            }
+
+            & img[src*="crystal-ball"]{
+                transition: 
+                    scale .8s 1700ms ease,
+                    opacity .8s 1700ms ease,
+                    transform 400ms ease;
+
+                width: 100%;
+            }
+        }
+    }
+
+    & .blur{
+        & img[src*="hero-background"]{
+            width: 100%;
+            margin-inline: auto;
+            height: 59.25rem;
+            object-fit: cover;
+
+            position: absolute;
+            top: 0;
+            z-index: -1;
+
+            opacity: 0;
+            animation: 
+                appear 3s 150ms forwards;
+        }
+
+        & div[ellipse-1]{
+            max-width: 30.86rem;
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+
+            position: absolute;
+            top: 45.125rem;
+            right: -13.875rem;
+            z-index: -1;
+
+            &::before{
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                background-image: radial-gradient(
+                    ellipse,
+                    var(--pink-low) 5%,
+                    transparent 35%
+                );
+
+                filter: blur(9.375rem);
+                inset: -9.375rem;
+            }
+        }
+
+        & div[ellipse-2]{
+            max-width: 23.5rem;
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+
+            position: absolute;
+            top: 30.875rem;
+            left: -16.1875rem;
+            z-index: -1;
+
+            &::before{
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+
+                background: radial-gradient(
+                    ellipse,
+                    var(--pink-low) 20%,
+                    transparent 45%
+                );
+                inset: -80px;
+                filter: blur(100px);
+
+            }
+        }
+
+        & div[ellipse-3]{
+            max-width: 33.625rem;
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+
+            position: absolute;
+            top: 61.6875rem;
+            left: 14.5rem;
+            z-index: -1;
+
+            &::before{
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                background-image: radial-gradient(
+                    ellipse,
+                    var(--pink-low) 5%,
+                    transparent 35%
+                );
+                filter: blur(9.375rem);
+                inset: -9.375rem;
+            }
+        }
+
+        & div[ellipse-4]{
+            max-width: 15.0625rem;
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 50%;
+
+            position: absolute;
+            top: 22.875rem;
+            right: -6.0625rem;
+            z-index: -1;
+
+            &::before{
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                background-image: radial-gradient(
+                    circle at bottom,
+                    var(--pink-low) 15%,
+                    transparent 50%
+                );
+                inset: -1.875rem;
+                filter: blur(5rem);
+            }
+        }
+    }
+}
+
+@keyframes appear{
+    to {
+        opacity: 1;
     }
 }
