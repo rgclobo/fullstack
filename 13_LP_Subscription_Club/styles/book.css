@@ -1,3 +1,205 @@
 #book{
-    
+    & header{
+        margin-top: 14.6875rem;
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+            padding-bottom: 0.3125rem;
+
+            & img{
+                max-width: 2rem;
+                width: 100%;
+                aspect-ratio: 1/1;
+                
+                filter: drop-shadow(0 0 1.75rem rgba(143, 59, 158, 0.5));
+            }
+        }
+        p{
+            max-width: 32.25rem;
+            width: 100%;
+            margin: auto;
+            
+            font: var(--fw-base) var(--body-md)/1.4 var(--ff-base);
+            text-align: center;
+        }
+    }
+
+    & .book-kit{
+        border: 1px solid green;
+        max-width: 90rem;
+        width: 100%;
+        height: 57.5rem;
+        margin: 8.5rem auto 14.375rem;
+
+        position: relative;
+        & img{
+            width: 100%;
+            object-fit: cover;
+
+            position: absolute;
+        }
+
+        & img[src*="book.png"]{
+            max-width: 29.1875rem;
+            height: 38.5625rem;
+
+            top: 8.375rem;
+            left: 29.5625rem;
+
+            /* opacity: 0; */
+        }
+
+        & img[src*="pin.png"]{
+            max-width: 13.875rem;
+            height: 15.875rem;
+
+            top: 28.455rem;
+            left: 32.910625rem;
+            z-index: -1;
+        }
+
+        & img[src*="yellow.png"]{
+            max-width: 10.75rem;
+            height: 33.5rem;
+            border-radius: .5rem;
+            
+
+            top: 10.625rem;
+            left: 46rem;
+            z-index: -1;
+        }
+
+        & img[src*="purple.png"]{
+            max-width: 10.75rem;
+            height: 33.5rem;
+            border-radius: .5rem;
+
+            top: 10.625rem;
+            left: 46rem;
+            z-index: -2;
+        }
+
+        & div{
+            & img[src*="arrow-1"]{
+                max-width: 10.90625rem;
+                height: 1.875rem;
+                top: 17.50rem;
+                left: 32.5rem;
+                z-index: -1;
+                scale: 0.356;
+            }
+
+            & img[src*="arrow-2"]{
+                max-width: 2.335rem;
+                height: 2.828125rem;
+                
+                top: 26.761875rem;
+                left: 35.221875rem;
+                z-index: -1;
+            }
+
+            & img[src*="arrow-3"]{
+                max-width: 3.23875rem;
+                height: 3.373125rem;
+                
+                top: 31.081875rem;
+                left: 50.75625rem;
+                z-index: -3;
+            }
+
+            & span{
+                width: 100%;
+                height: 1.375rem;
+
+                font: var(--fw-base) var(--body-md)/1.4 var(--ff-base);
+                color: var(--text-title);
+
+                position: absolute;
+            }
+
+            & span[span-1]{
+                max-width: 7.875rem;
+
+                top: 25.76rem;
+                left: 34.875rem;
+                z-index: -2;
+            }
+            & span[span-2]{
+                max-width: 11.0625rem;
+
+                top: 34.845rem;
+                left: 45.455625rem;
+                z-index: -3;
+            }
+            & span[span-3]{
+                max-width: 8.9375rem;
+
+                top: 17.1875rem;
+                left: 34.585rem;
+                z-index: -2;
+            }
+        }
+        
+
+        &:hover{
+            & img[src*="pin.png"]{
+                transform: 
+                    translateX(-11.98rem)
+                    translateY(8.001875rem)
+                    rotate(-8deg);
+            }
+
+            & img[src*="yellow.png"]{
+                transform: 
+                    translateX(9.509375rem)
+                    translateY(-6.99875rem)
+                    rotate(12deg);
+            }
+
+            & img[src*="purple.png"]{
+                transform: 
+                    translateX(17.3125rem)
+                    translateY(0.542666667rem)
+                    rotate(22deg);
+            }
+
+            & div{
+                & img[src*="arrow-1"]{
+                    scale: 1;
+
+                    transform: 
+                        translateX(-77.16px)
+                        translateY(442.5px);
+                }
+
+                & img[src*="arrow-2"]{}
+
+                & img[src*="arrow-3"]{}
+
+                & span[span-1]{}
+
+                & span[span-2]{}
+
+                & span[span-3]{
+                    transform: 
+                        translateX(-225px)
+                        translateY(-70px);
+                }
+            }
+        }
+
+    }
 }
+
+/* 
+
+834.41
+
+46
+
+-12
+
+*/
