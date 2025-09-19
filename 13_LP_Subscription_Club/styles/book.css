@@ -1,4 +1,5 @@
 #book{
+    overflow: hidden;
     & header{
         margin-top: 14.6875rem;
         div{
@@ -28,7 +29,6 @@
     }
 
     & .book-kit{
-        border: 1px solid green;
         max-width: 90rem;
         width: 100%;
         height: 57.5rem;
@@ -36,81 +36,110 @@
 
         position: relative;
         & img{
+            --move-x: 0;
+            --move-y: 0;
+            --deg: 0;
+
             width: 100%;
             object-fit: cover;
 
             position: absolute;
+            top: var(--top);
+            left: var(--left);
+
+            transform: 
+                translateX(var(--move-x))
+                translateY(var(--move-y))
+                rotate(var(--deg))
+            ;
+            transition: 
+                transform 0.7s cubic-bezier(0.34, 1.30, 0.64, 1),
+                scale 1s ease
+            ;
         }
 
         & img[src*="book.png"]{
+            --top: 8.375rem;
+            --left: 29.5625rem;
             max-width: 29.1875rem;
             height: 38.5625rem;
-
-            top: 8.375rem;
-            left: 29.5625rem;
-
-            /* opacity: 0; */
         }
-
         & img[src*="pin.png"]{
+            --top: 28.455rem;
+            --left: 32.910625rem;
             max-width: 13.875rem;
             height: 15.875rem;
 
-            top: 28.455rem;
-            left: 32.910625rem;
             z-index: -1;
         }
-
         & img[src*="yellow.png"]{
+            --top: 10.625rem;
+            --left: 46rem;
             max-width: 10.75rem;
             height: 33.5rem;
-            border-radius: .5rem;
-            
 
-            top: 10.625rem;
-            left: 46rem;
+            border-radius: .5rem;
+
             z-index: -1;
         }
-
         & img[src*="purple.png"]{
+            --top: 10.625rem;
+            --left: 46rem;
             max-width: 10.75rem;
             height: 33.5rem;
+
             border-radius: .5rem;
 
-            top: 10.625rem;
-            left: 46rem;
             z-index: -2;
         }
 
         & div{
+            & img[src*="arrow"]{
+                max-width: var(--max-wd);
+                height: var(--max-ht);
+
+                top: calc(var(--top) - var(--min-ht));
+                left: calc(var(--left) - var(--min-wd)) ;
+
+                scale: 0.356; /* Resultado da divisão de --min-wd por --max-wd */
+                transition: 
+                transform 0.7s cubic-bezier(0.34, 1.30, 0.64, 1);
+            }
+
             & img[src*="arrow-1"]{
-                max-width: 10.90625rem;
-                height: 1.875rem;
-                top: 17.50rem;
-                left: 32.5rem;
-                z-index: -1;
-                scale: 0.356;
-            }
+                --max-wd: 11.30625rem;
+                --min-wd: 4.025025rem;
+                --max-ht: 2.075rem;
+                --min-ht: 0.7387rem; /* Altura do elemento quando com scale */
+                --top: 18.200625rem;
+                --left: 36.25375rem;
 
+                z-index: -1;
+            }
             & img[src*="arrow-2"]{
-                max-width: 2.335rem;
-                height: 2.828125rem;
-                
-                top: 26.761875rem;
-                left: 35.221875rem;
+                --max-wd: 6.553125rem;
+                --min-wd: 2.335rem;
+                --max-ht: 7.9375rem;
+                --min-ht: 2.828125rem;
+                --top: 26.761875rem;
+                --left: 35.221875rem;
+
                 z-index: -1;
             }
-
             & img[src*="arrow-3"]{
-                max-width: 3.23875rem;
-                height: 3.373125rem;
-                
-                top: 31.081875rem;
-                left: 50.75625rem;
+                --max-wd: 9.990625rem;
+                --min-wd: 3.5566625rem;
+                --max-ht: 9.86875rem;
+                --min-ht: 3.513275rem;
+                --top: 31.081875rem;
+                --left: 50.75625rem;
+
                 z-index: -3;
             }
 
             & span{
+                --move-x: 0;
+                --move-y: 0;
                 width: 100%;
                 height: 1.375rem;
 
@@ -118,88 +147,115 @@
                 color: var(--text-title);
 
                 position: absolute;
+                top: var(--top);
+                left: var(--left);
+
+                transform: 
+                    translateX(var(--move-x))
+                    translateY(var(--move-y))
+                ;
+                transition: 0.7s cubic-bezier(0.34, 1.30, 0.64, 1);
             }
 
             & span[span-1]{
+                --top: 25.76rem;
+                --left: 34.875rem;
                 max-width: 7.875rem;
 
-                top: 25.76rem;
-                left: 34.875rem;
                 z-index: -2;
             }
             & span[span-2]{
+                --top: 34.845rem;
+                --left: 45.455625rem;
                 max-width: 11.0625rem;
 
-                top: 34.845rem;
-                left: 45.455625rem;
                 z-index: -3;
             }
             & span[span-3]{
+                --top: 17.1875rem;
+                --left: 34.585rem;
                 max-width: 8.9375rem;
 
-                top: 17.1875rem;
-                left: 34.585rem;
                 z-index: -2;
             }
         }
-        
 
+        & div[ellipse-book]{
+        max-width: 58.125rem;
+        width: 100%;
+
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+
+        position: absolute;
+        top: -4.375rem;
+        left: 15.9375rem;
+        z-index: -4;
+
+        &::before{
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            background-image: radial-gradient(
+                ellipse,
+                var(--pink-low) 20%,
+                transparent 35%
+            );
+
+            filter: blur(20.375rem);
+            inset: -20.375rem;
+        }
+        }
+        
         &:hover{
             & img[src*="pin.png"]{
-                transform: 
-                    translateX(-11.98rem)
-                    translateY(8.001875rem)
-                    rotate(-8deg);
+                --move-x: -11.98rem;
+                --move-y: 8.001875rem;
+                --deg: -8deg;
             }
-
             & img[src*="yellow.png"]{
-                transform: 
-                    translateX(9.509375rem)
-                    translateY(-6.99875rem)
-                    rotate(12deg);
+                --move-x: 9.509375rem;
+                --move-y: -6.99875rem;
+                --deg: 12deg;
             }
-
             & img[src*="purple.png"]{
-                transform: 
-                    translateX(17.3125rem)
-                    translateY(0.542666667rem)
-                    rotate(22deg);
+                --move-x: 17.3125rem;
+                --move-y: 0.542666667rem;
+                --deg: 22deg;
+
             }
 
             & div{
-                & img[src*="arrow-1"]{
+                & img[src*="arrow"]{
                     scale: 1;
-
-                    transform: 
-                        translateX(-77.16px)
-                        translateY(442.5px);
+                }
+                & img[src*="arrow-1"]{
+                    --move-x: calc(-15.31625rem + var(--min-wd));
+                    --move-y: calc(-10.981875rem + var(--min-ht));
+                }
+                & img[src*="arrow-2"]{
+                    --move-x: calc(-17.18125rem + var(--min-wd));
+                    --move-y: calc(4.488125rem + var(--min-ht));
+                }
+                & img[src*="arrow-3"]{
+                    --move-x: calc(10.8875rem + var(--min-wd));
+                    --move-y: calc(12.293125rem + var(--min-ht));
                 }
 
-                & img[src*="arrow-2"]{}
-
-                & img[src*="arrow-3"]{}
-
-                & span[span-1]{}
-
-                & span[span-2]{}
-
+                & span[span-1]{
+                    --move-x: -17.875rem;
+                    --move-y: 2.6775rem;
+                }
+                & span[span-2]{
+                    --move-x: 10.606875rem;
+                    --move-y: 19.0925rem;
+                }
                 & span[span-3]{
-                    transform: 
-                        translateX(-225px)
-                        translateY(-70px);
+                    --move-x: -18.6475rem;
+                    --move-y: -12.8125rem;
                 }
             }
         }
-
     }
+    
 }
-
-/* 
-
-834.41
-
-46
-
--12
-
-*/
