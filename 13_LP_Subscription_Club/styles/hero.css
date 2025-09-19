@@ -269,7 +269,6 @@
             max-width: 30.86rem;
             width: 100%;
             aspect-ratio: 1/1;
-            object-fit: cover;
             border-radius: 50%;
 
             position: absolute;
@@ -296,7 +295,6 @@
             max-width: 23.5rem;
             width: 100%;
             aspect-ratio: 1/1;
-            object-fit: cover;
             border-radius: 50%;
 
             position: absolute;
@@ -314,8 +312,8 @@
                     var(--pink-low) 20%,
                     transparent 45%
                 );
-                inset: -80px;
-                filter: blur(100px);
+                inset: -5rem;
+                filter: blur(6.25rem);
 
             }
         }
@@ -324,7 +322,6 @@
             max-width: 33.625rem;
             width: 100%;
             aspect-ratio: 1/1;
-            object-fit: cover;
             border-radius: 50%;
 
             position: absolute;
@@ -350,7 +347,6 @@
             max-width: 15.0625rem;
             width: 100%;
             aspect-ratio: 1/1;
-            object-fit: cover;
             border-radius: 50%;
 
             position: absolute;
