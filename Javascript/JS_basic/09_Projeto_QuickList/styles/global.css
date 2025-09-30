@@ -22,11 +22,45 @@
             /* Family */
     --font-family: "Inter", sans-serif;
             /* Size */
-    --fs-lg: 2rem;
+    --fs-lg: 2.5rem;
     --fs-base: 1rem;
     --fs-sm: 0.875rem;
             /* Weight */
     --fw-bold: 700;
     --fw-semiBold: 600;
     --fw-medium: 500;
+    --fw-base: 400;
+            /* Line-height */
+    --lh-lg: 2rem;
+    --lh-medium: 1.25rem;
+    --lh-sm: 1rem;
+
+        /* Padding Inline */
+    --px: 2rem;
+}
+html{
+    font-family: var(--font-family);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-base);
+    line-height: normal;
+}
+body{
+    background-color: var(----backbackground-primary);
+}
+h1{
+    font: var(--fw-bold) var(--fs-lg) var(--font-family);
+    line-height: var(--lh-lg);
+}
+p{
+    font: var(--fw-medium) var(--fs-base) var(--font-family);
+    line-height: var(--lh-medium);
+}
+label{
+    font: var(--fw-semiBold) var(--fs-base) var(--font-family);
+    line-height: var(--lh-medium);
+}
+a{
+    font: var(--fw-medium) var(--fs-sm) var(--font-family);
+    line-height: var(--lh-sm);
+    text-decoration: none;
 }
