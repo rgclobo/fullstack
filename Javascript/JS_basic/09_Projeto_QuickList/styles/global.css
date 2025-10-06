@@ -6,7 +6,7 @@
 :root{
     /* Variables */
         /* Colors */
-    --backbackground-primary: #F4F5FB;
+    --background-primary: #F4F5FB;
     --background-secondary: #FFFFFF;
     --color-brand: #CA3884;
     --color-brand-hover: #A52C6B;
@@ -21,8 +21,8 @@
         /* Fonts */
             /* Family */
     --font-family: "Inter", sans-serif;
-            /* Size */
-    --fs-lg: 2.5rem;
+            /* Sizes */
+    --fs-lg: 1.5rem;
     --fs-base: 1rem;
     --fs-sm: 0.875rem;
             /* Weight */
@@ -45,7 +45,7 @@ html{
     line-height: normal;
 }
 body{
-    background-color: var(----backbackground-primary);
+    background-color: var(--background-primary);
 }
 h1{
     font: var(--fw-bold) var(--fs-lg) var(--font-family);
@@ -59,8 +59,29 @@ label{
     font: var(--fw-semiBold) var(--fs-base) var(--font-family);
     line-height: var(--lh-medium);
 }
+input{
+    line-height: 140%;
+}
 a{
     font: var(--fw-medium) var(--fs-sm) var(--font-family);
     line-height: var(--lh-sm);
     text-decoration: none;
+}
+
+ul[role="list"]{
+    list-style: none;
+}
+
+
+@media (width < 43.4375em){
+:root{
+    /* Fonts */
+        /* Sizes */
+    --fs-lg: 1rem;
+}
+
+h1{
+    font-weight: var(--fw-semiBold);
+    line-height: var(--lh-medium);
+}
 }

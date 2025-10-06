@@ -23,35 +23,36 @@
             <h1>Compras da semana</h1>
         </header>
 
-        <form action="" method="post">
+        <form action="" method="post" id="form">
             <div class="form-wrapper">
                 <div class="input-wrapper">
                     <input type="text" name="newItem" id="newItem"
-                        required 
                         placeholder="Adicione um novo item"
                     >
-                    <button>Adicionar item</button>
+                    <button class="btn" type="submit">Adicionar item</button>
                 </div>
 
                 <div class="checkbox-wrapper">
-                    <ul>
-                        <li>
-                            <div class="input-wrapper">
-                                <input type="checkbox" name="item-1" id="item-1">
-                                <label for="item-1">Pão de forma</label>
-                                <button>
-                                    <img src="./assets/icons/trash.svg" alt="ícone de lixeira">
-                                </button>
-                            </div>
+                    <ul role="list" id="listItems" >
+                        <li class="checkbox-inner" id="listItem-1">
+                            <input type="checkbox" name="item-1" id="item-1">
+                            <label for="item-1">Pão de forma</label>
+                            <button type="button" class="btn-trash">
+                                <img src="./assets/icons/trash.svg" alt="ícone de lixeira">
+                            </button>
                         </li>
                     </ul>
                 </div>
             </div>
-
-
         </form>
 
-
+        <div class="danger" id="alertDanger">
+            <img src="./assets/icons/warning-circle-filled.svg" alt="simbolo de alerta">
+            <span>O item foi removido da lista!</span>
+            <button type="button" id="closeAlert">
+                <img src="./assets/icons/delete-small.svg" alt="simbolo de X para fechar">
+            </button>
+        </div>
     </main>
 </body>
 </html>
