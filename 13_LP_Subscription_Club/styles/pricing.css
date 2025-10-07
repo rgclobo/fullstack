@@ -1,1 +1,150 @@
-#pricing{}
+#pricing{
+    & .headerPricing{
+        max-width: 18.375rem;
+        width: 100%;
+        height: 4.75rem;
+        margin: 12.125rem auto 3.5rem;
+
+        text-align: center;
+    }
+
+    & .pricing-items{
+        max-width: 65.625rem;
+        width: 100%;
+        height: 37.875rem;
+        margin: auto;
+
+        /* border: 1px solid red; */
+
+        display: flex;
+        gap: 1rem;
+
+        & .card{
+            max-width: 18rem;
+            width: 100%;
+            height: 26rem;
+
+            padding: 2rem 2rem 1.75rem;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            background-color: var(--shape-base);
+
+            border-radius: 1.5rem;
+            & .headerCard{
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                & h4{
+                    color: var(--blue-light);
+                }
+                & .price{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    & h2{
+                        & span{
+                            font-size: var(--title-xs);
+                            color: var(--text-title);
+                        }
+                    }
+                    & span{
+                        font-size: var(--body-sm);
+                        color: var(--text-label);
+                    }
+                }
+            }
+
+            & .details{
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                & ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.75rem;
+                    & li{
+                        display: flex;
+                        gap: 0.5rem;
+                        align-items: center;
+
+                        & img{
+                            max-width: 0.875rem;
+                            width: 100%;
+                            height: 0.875rem;
+                            aspect-ratio: 1/1;
+                            object-fit: cover;
+                        }
+                        & p{
+                            font: var(--fw-base) var(--body-xs)/1.4 var(--ff-base);
+                            color: var(--text-body);
+                        }
+                    }
+                }
+
+                & button{
+                    width: 100%;
+                    height: 2.5rem;
+
+                    border: none;
+                    border-radius: 0.5rem;
+
+                    background-color: var(--blue-dark);
+                    color: var(--text-title);
+
+                }
+            }
+        }
+
+        & #semiAnnual{
+            position: relative;
+
+            & .headerCard{
+                & h4{
+                    color: var(--pink-light);
+                }
+            }
+            & .details{
+                & button{
+                    background-color: var(--pink-dark);
+                }
+            }
+            & .tag{
+                width: max-content;
+                padding: 0.5rem 1.25rem;
+
+                background-color: var(--shape-stroke);
+
+                border-radius: 1rem;
+
+                display: flex;
+                align-items: center;
+
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+
+                & span{
+                    font: var(--fw-bold) var(--tag) var(--ff-base);
+                    text-transform: uppercase;
+                    display: block;
+                }
+            }
+            & img[src*="bunny.svg"]{
+                max-width: 2.8125rem;
+                width: 100%;
+                height: 3.125rem;
+                object-fit: cover;
+
+                position: absolute;
+                top: -3rem;
+                left: 2rem;
+
+                z-index: -1;
+            }
+        }
+    }
+}
